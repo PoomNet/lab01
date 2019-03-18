@@ -50,6 +50,9 @@ class TodoProvider{
     }
     );
   }
+  Future delete(int id) async{
+    return await db.delete(tableTodo, where: "$columnId = ?", whereArgs: [id]);
+  }
   Future<Todo>insert(Todo todo) async{
     db.insert(tableTodo, todo.toMap());
     return todo;

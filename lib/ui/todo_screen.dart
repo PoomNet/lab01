@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:todo.dart';
+import 'todo.dart';
 
 class TodoScreen extends StatelessWidget{
+  TodoProvider todo = TodoProvider();
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
